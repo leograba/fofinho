@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>main.cpp</file>
+        <file>src/ui-qml/ProgField.qml</file>
+        <file>src/ui-qml/ProgFieldForm.ui.qml</file>
+        <file>src/ui-qml/TopBar.qml</file>
+        <file>src/ui-qml/TopBarForm.ui.qml</file>
+        <file>src/ui-qml/CmdField.qml</file>
+        <file>src/ui-qml/CmdFieldForm.ui.qml</file>
+        <file>src/ui-qml/ActionField.qml</file>
+        <file>src/ui-qml/ActionFieldForm.ui.qml</file>
+    </qresource>
+</RCC>
