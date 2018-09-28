@@ -14,24 +14,43 @@ Item {
         anchors.bottomMargin: mg
         radius: mg / 2
 
+        MouseArea {
+            // Enable to drag the scratchpad area
+            anchors.fill: parent
+
+            drag.target: scratchpadArea
+            cursorShape: Qt.PointingHandCursor
+            acceptedButtons: Qt.MiddleButton
+        }
+
         Rectangle {
-            id: rectangle1
-            x: 35
-            y: 36
-            width: 200
-            height: 47
-            color: "#204a87"
+            // Scratchpad area
+            id: scratchpadArea
+            width: parent.width * 2
+            height: parent.height * 2
+            color: 'transparent'
 
-            MouseArea {
-                id: mouseArea1
-                anchors.fill: parent
+            Rectangle {
+                id: rectangle1
+                x: 35
+                y: 36
+                width: 200
+                height: 47
+                color: "#204a87"
 
-                drag.target: parent
-                drag.axis: Drag.XAndYAxis
-                drag.minimumX: 0
-                drag.maximumX: scratchpad.width - width
-                drag.minimumY: 0
-                drag.maximumY: scratchpad.height - height
+                MouseArea {
+                    id: mouseArea1
+                    anchors.fill: rectangle1
+                    cursorShape: Qt.ClosedHandCursor
+                    propagateComposedEvents: true
+
+                    drag.target: parent
+                    drag.axis: Drag.XAndYAxis
+                    drag.minimumX: 0
+                    drag.maximumX: scratchpadArea.width - width
+                    drag.minimumY: 0
+                    drag.maximumY: scratchpadArea.height - height
+                }
             }
         }
     }

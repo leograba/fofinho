@@ -17,6 +17,7 @@ Window {
         id: topbar
         width: parent.width
         anchors.top: parent.top
+        z: 1
     }
 
     ActionField{
@@ -24,6 +25,7 @@ Window {
 
         anchors.left: parent.left
         anchors.bottom: parent.bottom
+        z: 1
     }
 
     CmdField{
@@ -31,6 +33,7 @@ Window {
         anchors.left: parent.left
         anchors.top: topbar.bottom
         anchors.bottom: actfield.top
+        z: 1
     }
 
     ProgField{
@@ -40,5 +43,4 @@ Window {
         anchors.right: parent.right
         anchors.bottom: parent.bottom
     }
-
 }
