@@ -6,13 +6,17 @@ Item {
     height: 200
 
     Rectangle {
-        id: actfield
-        color: "#c1b9b9"
         anchors.fill: parent
-        anchors.rightMargin: mg / 2
-        anchors.leftMargin: mg
-        anchors.topMargin: mg / 2
-        anchors.bottomMargin: mg
-        radius: mg / 2
+        color: "white"
+        Rectangle {
+            id: actfield
+            color: "#c1b9b9"
+            anchors.fill: parent
+            anchors.rightMargin: mg / 2
+            anchors.leftMargin: mg
+            anchors.topMargin: mg / 2
+            anchors.bottomMargin: mg
+            radius: mg / 2
+        }
     }
 }
