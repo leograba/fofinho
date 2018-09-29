@@ -34,12 +34,11 @@ Item {
             anchors.bottomMargin: mg / 2
             clip: true
 
-            Rectangle {
+            Canvas {
                 // Scratchpad area
                 id: scratchpadArea
                 width: parent.width * 2
                 height: parent.height * 2
-                color: 'transparent'
 
                 Rectangle {
                     id: rectangle1
