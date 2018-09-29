@@ -8,6 +8,10 @@ ProgFieldForm {
     }
 
     scratchpadArea.onPaint: {
+        // Before context start
+        scratchpadArea.renderTarget = Canvas.FramebufferObject
+        scratchpadArea.renderStrategy = Canvas.Threaded
+
         // Get context
         var ctx = scratchpadArea.getContext("2d");
 
