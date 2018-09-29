@@ -3,6 +3,7 @@ import QtQuick 2.11
 Item {
     property int mg: 10
     property alias mouseArea1: mouseArea1
+    property alias scratchpadArea: scratchpadArea
 
     Rectangle {
         id: scratchpad
