@@ -21,6 +21,12 @@ Item {
             drag.target: scratchpadArea
             cursorShape: Qt.PointingHandCursor
             acceptedButtons: Qt.MiddleButton
+
+            drag.axis: Drag.XAndYAxis
+            drag.minimumX: -(scratchpadArea.width - width + mg)
+            drag.maximumX: 0
+            drag.minimumY: -(scratchpadArea.height - height + mg)
+            drag.maximumY: 0
         }
 
         Rectangle {
